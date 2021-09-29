@@ -208,7 +208,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           break;
         case BACKLIT:
           if (record->event.pressed) {
-            register_code(KC_RSFT);
+            register_code(KC_RGHT);
             #ifdef BACKLIGHT_ENABLE
               backlight_step();
             #endif
@@ -219,7 +219,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             writePinLow(E6);
             #endif
           } else {
-            unregister_code(KC_RSFT);
+            unregister_code(KC_RGHT);
             #ifdef __AVR__
             writePinHigh(E6);
             #endif
